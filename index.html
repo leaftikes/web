@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaf Tikes · Estimulación temprana en Playa del Carmen</title>
+<meta name="description" content="Experiencias de juego guiado y estimulación temprana para bebés y toddlers de 0 a 3 años en Playa del Carmen. Grupos pequeños, mamá siempre presente.">
+<meta name="theme-color" content="#F0E7D6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaf Tikes · Un nido para crecer jugando">
+<meta property="og:description" content="Juego guiado y estimulación temprana para peques de 0 a 3 años en Playa del Carmen. Únete a la lista de espera.">
+<meta property="og:image" content="/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/img/favicon.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#F0E7D6;--crema-2:#FAF5EA;--papel:#FFFCF6;
+  --cacao:#5A3326;--cacao-2:#6B4636;--tinta:#4A2A1F;
+  --terra:#AD6D50;--terra-dk:#8E5338;--arcilla:#D2A084;
+  --salvia:#A3B496;--musgo:#5E7A55;--musgo-dk:#4F6B47;
+  --manteq:#F2D8A7;--rubor:#E7B09C;--linea:#E3D5BF;
+  --radio:28px;--max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:var(--terra-dk)}
+a:hover{color:var(--cacao)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-dk);margin:0 0 12px}
+h1,h2,h3{color:var(--cacao);margin:0;line-height:1.1;font-weight:900}
+h2{font-size:clamp(32px,4.6vw,48px);margin-bottom:16px}
+h3{font-size:22px;line-height:1.25}
+p{margin:0}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--cacao-2);max-width:620px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-main{background:var(--terra-dk);color:#FFF8EE}
+.btn-main:hover{background:var(--cacao);color:#FFF8EE}
+.btn-soft{background:transparent;color:var(--cacao);box-shadow:inset 0 0 0 2px var(--arcilla)}
+.btn-soft:hover{background:var(--crema-2);color:var(--cacao)}
+.btn svg{width:20px;height:20px}
+section{padding:96px 0}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:10;background:#fff;padding:10px 16px;border-radius:8px}
+
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(240,231,214,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-bottom-color:var(--linea)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg.iso{width:46px;height:46px}
+.brand svg.wm{width:104px;height:66px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-weight:700;color:var(--cacao-2);font-size:16px}
+.nav ul a:hover{color:var(--terra-dk)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:15px}
+
+/* hero */
+.hero{padding:56px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#EEF2E8;color:var(--musgo-dk);font-weight:800;font-size:14px;border-radius:999px;padding:8px 16px;margin-bottom:22px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--musgo);display:block}
+.hero h1{font-size:clamp(42px,6.4vw,72px);margin-bottom:22px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero .lead{margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 22px;color:var(--cacao-2);font-weight:700;font-size:15px}
+.hero-facts span{display:flex;align-items:center;gap:8px}
+.hero-facts svg{width:18px;height:18px;color:var(--musgo)}
+.hero-art{position:relative;aspect-ratio:1;max-width:520px;justify-self:center;width:100%}
+.hero-art .disc{position:absolute;inset:0;border-radius:50%;background:var(--crema-2)}
+.hero-art .ring{position:absolute;inset:-18px;border-radius:50%;border:2px dashed var(--arcilla);opacity:.6}
+.hero-art svg.iso{position:absolute;inset:14%;width:72%;height:72%}
+.dot{position:absolute;border-radius:50%}
+
+/* experiencias */
+.exp{background:var(--crema-2)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.sec-head .lead{max-width:520px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:var(--papel);border:1px solid var(--linea);border-radius:var(--radio);padding:30px 28px;display:flex;flex-direction:column;gap:12px}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center}
+.card .ico svg{width:28px;height:28px}
+.age{font-size:13px;font-weight:800;border-radius:999px;padding:6px 12px;white-space:nowrap}
+.card p{color:var(--cacao-2);font-size:16.5px}
+.card .meta{margin-top:auto;padding-top:12px;border-top:1px dashed var(--linea);font-size:14px;font-weight:700;color:var(--terra-dk)}
+
+/* sesión */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;counter-reset:s;margin-top:44px}
+.step{position:relative;padding-top:66px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:48px;height:48px;border-radius:50%;background:var(--terra);color:#FFF8EE;font-weight:900;font-size:20px;display:grid;place-items:center}
+.step::after{content:"";position:absolute;top:24px;left:58px;right:-8px;border-top:2px dashed var(--arcilla)}
+.step:last-child::after{display:none}
+.step .min{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--musgo)}
+.step h3{margin:4px 0 6px;font-size:20px}
+.step p{font-size:15.5px;color:var(--cacao-2)}
+
+/* confianza */
+.trust{background:var(--cacao);color:var(--crema)}
+.trust h2{color:#FFF8EE}
+.trust .eyebrow{color:var(--manteq)}
+.trust .lead{color:#E6D6BC}
+.trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:44px}
+.t{background:rgba(255,248,238,.06);border:1px solid rgba(242,216,167,.18);border-radius:22px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+.t svg{width:28px;height:28px;flex:none;color:var(--manteq)}
+.t h3{color:#FFF8EE;font-size:18px;margin-bottom:4px}
+.t p{color:#E6D6BC;font-size:15.5px}
+
+/* también */
+.also-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:44px}
+.also{border-radius:var(--radio);padding:30px;display:flex;flex-direction:column;gap:10px}
+.also h3{font-size:24px}
+.also p{color:var(--cacao-2);font-size:16.5px}
+
+/* cta */
+.cta{padding:0 0 96px}
+.cta-box{background:var(--terra);border-radius:36px;padding:56px;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;color:#FFF8EE;position:relative;overflow:hidden}
+.cta-box .badge{width:150px;height:150px;border-radius:50%;background:var(--crema);display:grid;place-items:center}
+.cta-box .badge svg{width:108px;height:107px}
+.cta-box h2{color:#FFF8EE;margin-bottom:10px}
+.cta-box p{color:#FBEADF;font-size:18px;max-width:520px}
+.cta-box .btn-main{background:var(--crema);color:var(--cacao)}
+.cta-box .btn-main:hover{background:#fff;color:var(--cacao)}
+
+/* faq */
+.faq{background:var(--crema-2)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+details{background:var(--papel);border:1px solid var(--linea);border-radius:20px;padding:0 24px;margin-bottom:12px}
+summary{cursor:pointer;list-style:none;font-weight:800;font-size:18px;color:var(--cacao);padding:20px 36px 20px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:4px;top:50%;width:12px;height:12px;border-right:3px solid var(--terra);border-bottom:3px solid var(--terra);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{padding:0 0 22px;color:var(--cacao-2);font-size:16.5px}
+
+/* contacto / footer */
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+.c{display:flex;align-items:center;gap:16px;background:var(--papel);border:1px solid var(--linea);border-radius:22px;padding:22px 24px;text-decoration:none;color:var(--cacao);min-height:88px;transition:border-color .15s,transform .15s}
+.c:hover{border-color:var(--arcilla);transform:translateY(-2px);color:var(--cacao)}
+.c .ci{width:48px;height:48px;border-radius:14px;background:var(--crema);display:grid;place-items:center;flex:none}
+.c .ci svg{width:24px;height:24px;color:var(--terra-dk)}
+.c small{display:block;font-size:13px;font-weight:700;color:var(--terra-dk);text-transform:uppercase;letter-spacing:.08em}
+.c strong{font-size:17px;word-break:break-word}
+footer{padding:40px 0 48px;border-top:1px solid var(--linea)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--cacao-2)}
+.foot .brand svg.wm{width:90px;height:57px}
+.foot p.disc{max-width:520px}
+
+/* responsive */
+@media (max-width:980px){
+  .nav ul{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-art{max-width:360px;order:-1}
+  .cards,.also-grid,.trust-grid,.contact-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr;gap:0}
+  .step{padding:0 0 26px 70px;min-height:74px}
+  .step::after{top:56px;bottom:4px;left:23px;right:auto;border-top:0;border-left:2px dashed var(--arcilla)}
+  .faq-grid{grid-template-columns:1fr;gap:28px}
+  .cta-box{grid-template-columns:1fr;text-align:center;justify-items:center;padding:44px 28px}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  section{padding:72px 0}
+  .wrap{padding:0 16px}
+  .hero{padding:28px 0 72px}
+  .cards,.also-grid,.trust-grid,.contact-grid{grid-template-columns:1fr}
+  .nav .btn{padding:10px 16px;font-size:14px}
+  .brand svg.wm{width:86px;height:55px}
+  .brand svg.iso{width:40px;height:40px}
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-art{max-width:260px}
+  .hero-art .ring{inset:-10px}
+}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.c{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="iso" viewBox="0 0 192 190"><g transform="translate(-126,-24) scale(.5)"><path d="M560 48C400 50 260 110 252 245C250 275 255 290 260 293C400 285 555 220 560 48Z" fill="#A3B496"/><path d="M282 275L532 76" stroke="#86A07E" stroke-width="9" stroke-linecap="round"/><path d="M458 222C450 205 462 192 478 196" stroke="#B87358" stroke-width="7" stroke-linecap="round" fill="none"/><circle cx="458" cy="277" r="60" fill="#F2D8A7"/><circle cx="436" cy="275" r="8" fill="#5A3326"/><circle cx="481" cy="275" r="8" fill="#5A3326"/><circle cx="415" cy="295" r="12" fill="#E7B09C"/><circle cx="501" cy="295" r="12" fill="#E7B09C"/><path d="M449 291H469L459 306Z" fill="#D9895F" stroke="#D9895F" stroke-width="3" stroke-linejoin="round"/><path d="M270 305C400 322 520 322 634 304C630 380 550 422 452 422C350 422 280 380 270 305Z" fill="#D2A084"/><path d="M305 344Q452 374 601 344M327 379Q452 397 579 379" stroke="#B87358" stroke-width="9" stroke-linecap="round" fill="none"/></g></symbol>
+    <symbol id="wm" viewBox="147 455 620 395"><g stroke="#AD6D50" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M200 492V655Q200 700 245 700"/><g transform="translate(10 0)"><circle cx="490" cy="640" r="58"/><path d="M548 585V690"/></g><g transform="translate(-2 0)"><path d="M660 700V565Q660 512 716 512"/><path d="M620 595H712"/></g></g><g transform="translate(6 0)"><path d="M270 680L404 548C350 546 262 560 262 640C262 678 288 700 320 700C340 700 356 692 366 680" stroke="#7C9A72" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g><g transform="translate(342,836) scale(0.45)"><g stroke="#AD6D50" stroke-width="38" stroke-linecap="round" stroke-linejoin="round" fill="none"><g transform="rotate(-3 30 -50)"><path d="M28 -138 V-34 Q28 0 60 0 M0 -97 H56"/></g><g transform="translate(116,-8) rotate(3 0 -50)"><path d="M0 -100 V0"/></g><circle cx="116" cy="-160" r="21" fill="#7C9A72" stroke="none" transform="rotate(3 0 -50)"/><g transform="translate(172,0) rotate(-3 29 -50)"><path d="M0 -160 V0 M58 -100 L6 -52 M24 -70 L60 0"/></g><g transform="translate(286,-8) rotate(3 50 -50)"><path d="M0 -50 H100 A50 50 0 1 0 85.4 -14.6"/></g><g transform="translate(442,0) rotate(-3 35 -50)"><path d="M70 -82 C65 -100 10 -101 5 -79 C0 -53 72 -53 70 -24 C65 3 5 0 0 -18"/></g></g></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.2 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.7 3.8 6.9C19 15.6 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M7 11V6.5a1.5 1.5 0 0 1 3 0V11m0-1V5a1.5 1.5 0 0 1 3 0v5m0-.5V6.5a1.5 1.5 0 0 1 3 0V13m0-3.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a7 7 0 0 1-5.6-2.8L3.6 15.4a1.6 1.6 0 0 1 2.5-2L7 14.5V11" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0M3 17c2-3 4-3 6 0s4 3 6 0 4-3 6 0M7 7a2 2 0 1 0 0-.1M14 5a3 3 0 1 0 0-.1" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-run" viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m6 21 3.5-6 3 2.5V22M8 11l3-3.5 3.5 2.5 2.5 3H20M11 7.5 9 14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M12 9v5M9.5 11.5h5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 20c.6-3.3 3-5 6-5s5.4 1.7 6 5M16 5a3 3 0 0 1 0 6M18 15c1.7.6 2.7 2.3 3 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 8.5 4 15c0 1.6.4 3 .9 4 7.6-.3 14.6-5 15.1-15Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M5 19 14 10" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7ZM19 15c.3 1.9 1.1 2.7 3 3-1.9.3-2.7 1.1-3 3-.3-1.9-1.1-2.7-3-3 1.9-.3 2.7-1.1 3-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3v3M12 3v3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7C10 3 6.5 4 7.5 6.5 8 7.5 12 7 12 7Zm0 0c2-4 5.5-3 4.5-.5C16 7.5 12 7 12 7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.2-3.9A8 8 0 1 1 8 19l-4 1Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.2 8.6c.2-.4.6-.5.9-.4l.5.1.8 1.9-.6.8c.5 1 1.3 1.8 2.3 2.3l.8-.6 1.9.8.1.5c.1.3 0 .7-.4.9-.9.6-2.4.5-4.3-1.2-1.9-1.7-2.5-3.5-2-5.1Z" fill="currentColor"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Leaf Tikes, inicio">
+      <svg class="iso" aria-hidden="true"><use href="#iso"/></svg>
+      <svg class="wm" aria-hidden="true"><use href="#wm"/></svg>
+    </a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#sesion">Una sesión</a></li>
+        <li><a href="#confianza">Confianza</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-main" href="https://bit.ly/4i7XA0q" target="_blank" rel="noopener">Lista de espera</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill"><i></i>Próximamente en Playa del Carmen</span>
+        <h1>Un nido para <em>crecer jugando</em></h1>
+        <p class="lead">Experiencias de juego guiado y estimulación temprana para bebés y toddlers de 0 a 3 años. Un espacio bonito, seguro y cálido donde los peques exploran y las mamás también se sienten cuidadas.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-main" href="https://bit.ly/4i7XA0q" target="_blank" rel="noopener">Únete a la lista de espera <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-soft" href="#experiencias">Ver experiencias</a>
+        </div>
+        <div class="hero-facts">
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Grupos pequeños</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Mamá siempre presente</span>
+          <span><svg aria-hidden="true"><use href="#i-check"/></svg>Materiales seguros</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="ring"></div>
+        <div class="disc"></div>
+        <span class="dot" style="width:22px;height:22px;background:var(--salvia);top:8%;left:6%"></span>
+        <span class="dot" style="width:14px;height:14px;background:var(--rubor);top:2%;right:20%"></span>
+        <span class="dot" style="width:18px;height:18px;background:var(--manteq);bottom:10%;right:4%"></span>
+        <svg class="iso"><use href="#iso"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="exp" id="experiencias">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Experiencias</p>
+          <h2>Una experiencia para cada etapa</h2>
+        </div>
+        <p class="lead">Sesiones de 60 minutos en espacios aliados de Playa: cafés con jardín, estudios y terrazas. Tú estás con tu peque todo el tiempo.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="top">
+            <span class="ico" style="background:#EEF2E8;color:var(--musgo)"><svg aria-hidden="true"><use href="#i-hand"/></svg></span>
+            <span class="age" style="background:var(--salvia);color:#2F3E2A">0 a 6 meses</span>
+          </div>
+          <h3>Baby Connect</h3>
+          <p>Masaje infantil guiado, tarjetas de contraste y texturas suaves. Cerramos con un círculo para platicar con otras mamás sobre sueño, lactancia y porteo.</p>
+          <p class="meta">60 min · 5 a 6 bebés</p>
+        </article>
+        <article class="card">
+          <div class="top">
+            <span class="ico" style="background:#FBF0D9;color:var(--terra-dk)"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>
+            <span class="age" style="background:var(--manteq);color:#3E2219">6 a 18 meses</span>
+          </div>
+          <h3>Sensory Play</h3>
+          <p>Estaciones sensoriales, cesta de tesoros con objetos naturales, pintura segura y burbujas para explorar con todo el cuerpo.</p>
+          <p class="meta">60 min · 6 a 8 peques</p>
+        </article>
+        <article class="card">
+          <div class="top">
+            <span class="ico" style="background:#F6E6DC;color:var(--terra-dk)"><svg aria-hidden="true"><use href="#i-run"/></svg></span>
+            <span class="age" style="background:var(--arcilla);color:#3E2219">1 a 3 años</span>
+          </div>
+          <h3>Little Movers</h3>
+          <p>Música, circuito de movimiento con rampas, túnel y equilibrio, paracaídas de colores y arte libre para gastar energía y convivir.</p>
+          <p class="meta">60 min · 8 a 10 peques</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sesion">
+    <div class="wrap">
+      <p class="eyebrow">Una sesión</p>
+      <h2>Así son 60 minutos en Leaf Tikes</h2>
+      <p class="lead">Rituales que se repiten cada semana para que tu peque se sienta en casa, con actividades nuevas cada vez.</p>
+      <ol class="steps" style="list-style:none;padding:0;margin-top:44px">
+        <li class="step"><span class="min">10 min</span><h3>Bienvenida</h3><p>Registro, calcetines antiderrapantes y café o agua para ti.</p></li>
+        <li class="step"><span class="min">10 min</span><h3>Círculo de música</h3><p>Canción de bienvenida con gestos y el nombre de cada peque.</p></li>
+        <li class="step"><span class="min">25 min</span><h3>Exploración guiada</h3><p>Estaciones sensoriales o circuito de movimiento, según la edad.</p></li>
+        <li class="step"><span class="min">10 min</span><h3>Actividad central</h3><p>Pintura, burbujas, pelotas o masaje.</p></li>
+        <li class="step"><span class="min">5 min</span><h3>Cierre</h3><p>Canción de despedida y un tip para seguir jugando en casa.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="trust" id="confianza">
+    <div class="wrap">
+      <p class="eyebrow">Confianza</p>
+      <h2>La tranquilidad también se diseña</h2>
+      <p class="lead">Cada detalle está pensado para que tú solo te preocupes por disfrutar.</p>
+      <div class="trust-grid">
+        <div class="t"><svg aria-hidden="true"><use href="#i-sparkle"/></svg><div><h3>Facilitadora especialista</h3><p>Formación en estimulación temprana y desarrollo infantil.</p></div></div>
+        <div class="t"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Primeros auxilios pediátricos</h3><p>Botiquín y protocolo de seguridad en cada sesión.</p></div></div>
+        <div class="t"><svg aria-hidden="true"><use href="#i-leaf"/></svg><div><h3>Materiales seguros</h3><p>No tóxicos, de madera y tela, sin piezas pequeñas.</p></div></div>
+        <div class="t"><svg aria-hidden="true"><use href="#i-users"/></svg><div><h3>Grupos pequeños</h3><p>Cupo limitado para que cada peque reciba atención.</p></div></div>
+        <div class="t"><svg aria-hidden="true"><use href="#i-heart"/></svg><div><h3>Mamá siempre presente</h3><p>Jugamos juntos: tú eres parte de la experiencia.</p></div></div>
+        <div class="t"><svg aria-hidden="true"><use href="#i-cup"/></svg><div><h3>Un respiro para ti</h3><p>Café, comunidad y un espacio para conectar con otras mamás.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tambien">
+    <div class="wrap">
+      <p class="eyebrow">También</p>
+      <h2>Más formas de jugar con Leaf Tikes</h2>
+      <div class="also-grid">
+        <div class="also" style="background:#F6E6DC">
+          <h3>Talleres temáticos</h3>
+          <p>Arte sensorial, naturaleza y temporadas como Día de Muertos o Navidad, con foto del recuerdo. De 18 meses a 3 años.</p>
+        </div>
+        <div class="also" style="background:#FBF0D9">
+          <h3>Cumpleaños y baby showers</h3>
+          <p>Llevamos la experiencia Leaf Tikes a tu fiesta: montaje bonito, facilitadora y actividades para los peques.</p>
+        </div>
+        <div class="also" style="background:#EEF2E8">
+          <h3>Kits para casa</h3>
+          <p>Juguetes de madera y actividades por edad con una guía de juegos. Para ti o para regalar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="cta-box">
+        <div class="badge" aria-hidden="true"><svg><use href="#iso"/></svg></div>
+        <div>
+          <h2 id="cta-title">Ayúdanos a crearlo contigo</h2>
+          <p>Cuéntanos qué horarios, zona y actividades buscas para tu peque. Son menos de 3 minutos, puede ser anónima y te avisamos primero cuando abramos.</p>
+        </div>
+        <a class="btn btn-main" href="https://bit.ly/4i7XA0q" target="_blank" rel="noopener">Contestar encuesta <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="preguntas">
+    <div class="wrap faq-grid">
+      <div>
+        <p class="eyebrow">Preguntas</p>
+        <h2>Lo que nos preguntan las mamás</h2>
+        <p class="lead">¿Tienes otra duda? Escríbenos por WhatsApp y te respondemos.</p>
+      </div>
+      <div>
+        <details open>
+          <summary>¿Cuándo y dónde serán las sesiones?</summary>
+          <p>Estamos preparando las primeras sesiones para finales de 2026 en espacios aliados de Playa del Carmen. Únete a la lista de espera y te avisamos fechas, horarios y sede antes que a nadie.</p>
+        </details>
+        <details>
+          <summary>¿Tengo que quedarme con mi peque?</summary>
+          <p>Sí. Las sesiones son para disfrutarlas juntos: mamá, papá o un cuidador de confianza participa siempre.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Estamos definiendo precios con la ayuda de la encuesta. Habrá sesión suelta, paquetes y un precio especial para las familias fundadoras de la lista de espera.</p>
+        </details>
+        <details>
+          <summary>¿Mi peque necesita algo especial?</summary>
+          <p>Ropa cómoda y ganas de jugar. Nosotras llevamos los materiales; si tu peque está enfermo, te pedimos reagendar para cuidar a todo el grupo.</p>
+        </details>
+        <details>
+          <summary>¿Es una terapia?</summary>
+          <p>No. Leaf Tikes ofrece experiencias de juego guiado y convivencia; no sustituye una terapia ni una valoración médica.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <p class="eyebrow">Contacto</p>
+      <h2>Platiquemos</h2>
+      <div class="contact-grid">
+        <a class="c" href="https://wa.me/529841810085?text=Hola%20Leaf%20Tikes%20%F0%9F%8C%BF%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">
+          <span class="ci"><svg aria-hidden="true"><use href="#i-wa"/></svg></span>
+          <span><small>WhatsApp</small><strong>984 181 0085</strong></span>
+        </a>
+        <a class="c" href="https://instagram.com/leaftikes" target="_blank" rel="noopener">
+          <span class="ci"><svg aria-hidden="true"><use href="#i-ig"/></svg></span>
+          <span><small>Instagram</small><strong>@leaftikes</strong></span>
+        </a>
+        <a class="c" href="mailto:leaftikes@gmail.com">
+          <span class="ci"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <span><small>Correo</small><strong>leaftikes@gmail.com</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#top" aria-label="Leaf Tikes, volver arriba">
+      <svg class="iso" aria-hidden="true" style="width:38px;height:38px"><use href="#iso"/></svg>
+      <svg class="wm" aria-hidden="true"><use href="#wm"/></svg>
+    </a>
+    <p class="disc">Experiencias de juego guiado para bebés y toddlers de 0 a 3 años en Playa del Carmen, Quintana Roo. No sustituyen terapia ni valoración médica.</p>
+    <p>© <span id="y">2026</span> Leaf Tikes</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  var h = document.querySelector('header');
+  addEventListener('scroll', function () { h.classList.toggle('scrolled', scrollY > 8); }, {passive: true});
+</script>
+</body>
+</html>
